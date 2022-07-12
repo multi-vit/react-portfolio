@@ -1,11 +1,19 @@
 import React from 'react';
-import { ChakraProvider, theme, VStack } from '@chakra-ui/react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import AboutPage from '../AboutPage/AboutPage.js';
 import ProjectPage from '../ProjectPage/ProjectPage.js';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <ProjectPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AboutPage />} />
+          <Route path="projects" element={<ProjectPage />} />
+          <Route path="about" element={<AboutPage />} />
+        </Routes>
+      </BrowserRouter>
     </ChakraProvider>
   );
 }
