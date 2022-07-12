@@ -1,87 +1,84 @@
 import { useState } from 'react';
-import {
-  useColorMode,
-  Switch,
-  Flex,
-  Button,
-  IconButton
-} from '@chakra-ui/react';
+import { useColorMode, Flex, Button, IconButton } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import NextLink from 'next/link';
+import { ColourModeSwitcher } from '../ColourModeSwitcher/ColorModeSwitcher';
+import { Link } from 'react-router-dom';
 
-export default NavBar() {
-    const [display, changeDisplay] = useState('none')
-    return (
-        <Flex>
-<Flex position="fixed" top="1rem" right="1rem" align="center">
-  {/* Desktop */}
-  <Flex>
-    <NextLink href="/" passHref>
-      <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
-        Home
-      </Button>
-    </NextLink>
+export default function NavBar() {
+  const [display, changeDisplay] = useState('none');
+  return (
+    <Flex>
+      <Flex position="fixed" top="1rem" left="1rem" align="center" w="100%">
+        {/* Desktop */}
+        <Flex display={['none', 'none', 'flex', 'flex']}>
+          {/* Wrap each button inside this code, with the relevant href path when you've set up React Router
+          <Link href="/" passHref>
+          </Link>*/}
+          <Button as="a" variant="ghost" aria-label="About Me" my={5}>
+            About Me
+          </Button>
 
-    <NextLink href="/about" passHref>
-      <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
-        About
-      </Button>
-    </NextLink>
+          <Button as="a" variant="ghost" aria-label="Projects" my={5}>
+            Projects
+          </Button>
 
-    <NextLink href="/contact" passHref>
-      <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
-        Contact
-      </Button>
-    </NextLink>
-  </Flex>
+          <Button as="a" variant="ghost" aria-label="CV" my={5}>
+            CV
+          </Button>
+        </Flex>
 
-  {/* Mobile */}
-  <IconButton
-    aria-label="Open Menu"
-    size="lg"
-    mr={2}
-    icon={<HamburgerIcon />}
-    onClick={}
-  />
-  <Switch color="green" isChecked={isDark} onChange={toggleColorMode} />
-</Flex>
-{/* Mobile Content */}
-<Flex
-  bgColor="gray.50"
-  overflowY="auto"
-  flexDir="column"
->
-  <Flex justify="flex-end">
-    <IconButton
-      mt={2}
-      mr={2}
-      aria-label="Open Menu"
-      size="lg"
-      icon={<CloseIcon />}
-      onClick={}
-    />
-  </Flex>
+        {/* Mobile */}
+        <IconButton
+          aria-label="Open Menu"
+          size="lg"
+          mr={2}
+          icon={<HamburgerIcon />}
+          onClick={() => changeDisplay('flex')}
+          display={['flex', 'flex', 'none', 'none']}
+        />
+        <ColourModeSwitcher justify-self="flex-end" />
+      </Flex>
 
-  <Flex flexDir="column" align="center">
-    <NextLink href="/" passHref>
-      <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
-        Home
-      </Button>
-    </NextLink>
+      {/* Mobile Content */}
+      <Flex
+        w="100vw"
+        display={display}
+        zIndex={20}
+        h="100vh"
+        pos="fixed"
+        top="0"
+        left="0"
+        overflowY="auto"
+        flexDir="column"
+      >
+        <Flex justify="flex-end">
+          <IconButton
+            mt={2}
+            mr={2}
+            aria-label="Open Menu"
+            size="lg"
+            icon={<CloseIcon />}
+            onClick={() => changeDisplay('none')}
+          />
+        </Flex>
 
-    <NextLink href="/about" passHref>
-      <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
-        About
-      </Button>
-    </NextLink>
+        <Flex flexDir="column" align="center">
+          {/* Wrap each button inside this code, with the relevant href path when you've set up React Router
+          <Link href="/" passHref>
+          </Link>*/}
+          <Button as="a" variant="ghost" aria-label="About Me" my={5} w="100%">
+            About Me
+          </Button>
 
-    <NextLink href="/contact" passHref>
-      <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
-        Contact
-      </Button>
-    </NextLink>
-  </Flex>
-</Flex>
-</Flex>
-        )
+          <Button as="a" variant="ghost" aria-label="Projects" my={5} w="100%">
+            Projects
+          </Button>
+
+          <Button as="a" variant="ghost" aria-label="CV" my={5} w="100%">
+            CV
+          </Button>
+        </Flex>
+      </Flex>
+    </Flex>
+  );
 }
