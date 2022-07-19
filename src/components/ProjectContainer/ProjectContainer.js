@@ -6,7 +6,7 @@ import { projects } from '../../data.js';
 export default function ProjectContainer() {
   return (
     <Container maxW="80rem" centerContent>
-      <SimpleGrid columns={[1, 2, 1, 2]}>
+      <SimpleGrid columns={[1, 2, 1, 2]} spacing="5">
         {projects.map(project => {
           return (
             <ProjectCard
@@ -19,8 +19,6 @@ export default function ProjectContainer() {
             />
           );
         })}
-        <ProjectCard />
-        <ProjectCard />
       </SimpleGrid>
     </Container>
   );
