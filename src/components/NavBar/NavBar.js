@@ -46,12 +46,12 @@ export default function NavBar() {
         w="100vw"
         display={display}
         zIndex={20}
-        h="100vh"
         pos="fixed"
         top="0"
         left="0"
         overflowY="auto"
         flexDir="column"
+        backgroundColor={'#ffffff'}
       >
         <Flex justify="flex-end">
           <IconButton
@@ -69,19 +69,20 @@ export default function NavBar() {
           <Link href="/" passHref>
           </Link>*/}
           <Link to="/">
-            <Button as="a" variant="ghost" aria-label="About Me" my={5}>
+            <Button as="a" variant="outline" aria-label="About Me" my={5}>
               About Me
             </Button>
           </Link>
-          <Link to="projects">
-            <Button as="a" variant="ghost" aria-label="Projects" my={5}>
+          <Link to="/projects">
+            <Button as="a" variant="outline" aria-label="Projects" my={5}>
               Projects
             </Button>
           </Link>
-
-          <Button as="a" variant="ghost" aria-label="CV" my={5} w="100%">
-            CV
-          </Button>
+          <Link to="/cv">
+            <Button as="a" variant="outline" aria-label="CV" my={5} w="100%">
+              CV
+            </Button>
+          </Link>
         </Flex>
       </Flex>
     </Flex>
