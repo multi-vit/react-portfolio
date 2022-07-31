@@ -19,7 +19,7 @@ export default function NavBar() {
               About Me
             </Button>
           </Link>
-          <Link to="projects">
+          <Link to="/projects">
             <Button as="a" variant="ghost" aria-label="Projects" my={5}>
               Projects
             </Button>

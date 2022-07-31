@@ -75,7 +75,7 @@ export default function ProjectCard({
             fontSize={'sm'}
             textTransform={'uppercase'}
           >
-            Link to Github <ExternalLinkIcon mx="2px" />
+            Github <ExternalLinkIcon mx="2px" />
           </Link>
           <Stack direction={'row'} align={'center'}>
             <Text fontSize={'md'}>{description}</Text>
