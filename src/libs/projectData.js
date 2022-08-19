@@ -1,11 +1,10 @@
 import week9Demo from '../assets/project-images/week-9.gif';
 import virtualKeyboard from '../assets/project-images/virtual-keyboard.gif';
-
+//TODO add final project and python project (keep description inside limit for mobile card)
 const projects = [
   {
     title: 'Project Week',
-    description: `After only 8 weeks of learning to code, I worked as part of a team of 4 on a brief of improving life on the School of Code for remote bootcampers. 
-    We created an app with code snippets and links to helpful resources and presented it to a panel of senior developers and industry professionals.`,
+    description: `After only 8 weeks of learning to code, I worked as part of a team of 4 to create a full-stack app aimed at improving life on the School of Code for remote bootcampers.`,
     src: week9Demo,
     alt: 'Week 9 Project Screenshot',
     github: 'https://github.com/SchoolOfCode/w9_frontend-project-team-16',

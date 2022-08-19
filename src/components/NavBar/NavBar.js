@@ -4,11 +4,21 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColourModeSwitcher } from '../ColourModeSwitcher/ColourModeSwitcher';
 import { Link } from 'react-router-dom';
 
+//TODO Sort out navbar positioning so it fills the whole width and scrolled items move behind it
+//TODO Sort out navbar colour change on dark mode
+
 export default function NavBar() {
   const [display, changeDisplay] = useState('none');
   return (
     <Flex>
-      <Flex position="fixed" top="1rem" left="1rem" align="center" w="100%">
+      <Flex
+        position="fixed"
+        top="1rem"
+        left="1rem"
+        align="center"
+        w="100%"
+        bgColor="#FFCA3A"
+      >
         {/* Desktop */}
         <Flex display={['none', 'none', 'flex', 'flex']}>
           {/* Wrap each button inside this code, with the relevant href path when you've set up React Router

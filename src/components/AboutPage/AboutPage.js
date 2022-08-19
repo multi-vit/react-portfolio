@@ -11,15 +11,17 @@ import {
   Heading,
   Text,
 } from '@chakra-ui/react';
+import CurrentlyLearningContainer from '../CurrentlyLearningContainer/CurrentlyLearningContainer.js';
 import NavBar from '../NavBar/NavBar.js';
 import TechStackContainer from '../TechStackContainer/TechStackContainer.js';
-import PictureOfMe from './me.jpeg';
+import PictureOfMe from '../../assets/me.jpeg';
 
 export default function AboutPage() {
   return (
     <VStack spacing={100}>
       <NavBar />
       <Flex align="center">
+        {/*TODO - when navbar is sorted, sort positioning of accordion and image as currently spacing from top (spacing on vstack)*/}
         <Image
           src={PictureOfMe}
           alt="Me playing the sousaphone"
@@ -27,7 +29,7 @@ export default function AboutPage() {
           boxSize="100px"
           objectFit="cover"
         />
-        <Accordion allowToggle align-items="">
+        <Accordion allowToggle align-items="" maxWidth="80vw">
           <AccordionItem>
             <h1>
               <AccordionButton>
@@ -39,7 +41,7 @@ export default function AboutPage() {
                 <AccordionIcon />
               </AccordionButton>
             </h1>
-            <AccordionPanel pb={4}>
+            <AccordionPanel pb={4} maxWidth="80vw">
               Being a professional musician means I bring skills like
               communication, teamwork and problem solving along with possessing
               self-discipline and a passion for continual improvement from
@@ -77,6 +79,8 @@ export default function AboutPage() {
         </Box>
         <Heading>Tech Skills</Heading>
         <TechStackContainer />
+        <Heading>Currently Learning</Heading>
+        <CurrentlyLearningContainer />
       </VStack>
     </VStack>
   );
