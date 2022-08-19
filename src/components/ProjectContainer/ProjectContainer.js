@@ -1,7 +1,7 @@
 import React from 'react';
 import { SimpleGrid, Container } from '@chakra-ui/react';
 import ProjectCard from '../ProjectCard/ProjectCard';
-import { projects } from '../../data.js';
+import projects from '../../libs/projectData.js';
 
 export default function ProjectContainer() {
   return (

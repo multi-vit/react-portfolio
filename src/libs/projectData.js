@@ -1,7 +1,7 @@
-import week9Demo from './assets/week-9.gif';
-import virtualKeyboard from './assets/virtual-keyboard.gif';
+import week9Demo from '../assets/project-images/week-9.gif';
+import virtualKeyboard from '../assets/project-images/virtual-keyboard.gif';
 
-export const projects = [
+const projects = [
   {
     title: 'Project Week',
     description: `After only 8 weeks of learning to code, I worked as part of a team of 4 on a brief of improving life on the School of Code for remote bootcampers. 
@@ -20,3 +20,5 @@ export const projects = [
     techStack: ['HTML', 'CSS', 'JavaScript'],
   },
 ];
+
+export default projects;

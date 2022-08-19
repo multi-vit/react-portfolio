@@ -8,11 +8,11 @@ import {
   Box,
   Flex,
   Image,
-  SimpleGrid,
   Heading,
   Text,
 } from '@chakra-ui/react';
 import NavBar from '../NavBar/NavBar.js';
+import TechStackContainer from '../TechStackContainer/TechStackContainer.js';
 import PictureOfMe from './me.jpeg';
 
 export default function AboutPage() {
@@ -76,71 +76,7 @@ export default function AboutPage() {
           </Text>
         </Box>
         <Heading>Tech Skills</Heading>
-        <SimpleGrid columns={[3, null, 5]} spacing="5">
-          <Box>
-            <Text textAlign="center">HTML</Text>
-            <Image
-              boxSize="50px"
-              objectFit="cover"
-              src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-              alt="HTML Logo"
-            />
-          </Box>
-          <Box>
-            <Text textAlign="center">HTML</Text>
-            <Image
-              boxSize="50px"
-              objectFit="cover"
-              src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-              alt="HTML Logo"
-            />
-          </Box>
-          <Box>
-            <Text textAlign="center">HTML</Text>
-            <Image
-              boxSize="50px"
-              objectFit="cover"
-              src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-              alt="HTML Logo"
-            />
-          </Box>
-          <Box>
-            <Text textAlign="center">HTML</Text>
-            <Image
-              boxSize="50px"
-              objectFit="cover"
-              src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-              alt="HTML Logo"
-            />
-          </Box>
-          <Box>
-            <Text textAlign="center">HTML</Text>
-            <Image
-              boxSize="50px"
-              objectFit="cover"
-              src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-              alt="HTML Logo"
-            />
-          </Box>
-          <Box>
-            <Text textAlign="center">HTML</Text>
-            <Image
-              boxSize="50px"
-              objectFit="cover"
-              src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-              alt="HTML Logo"
-            />
-          </Box>
-          <Box>
-            <Text textAlign="center">HTML</Text>
-            <Image
-              boxSize="50px"
-              objectFit="cover"
-              src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-              alt="HTML Logo"
-            />
-          </Box>
-        </SimpleGrid>
+        <TechStackContainer />
       </VStack>
     </VStack>
   );
