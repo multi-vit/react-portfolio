@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useColorMode, Flex, Button, IconButton } from '@chakra-ui/react';
+import { Flex, Button, IconButton } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColourModeSwitcher } from '../ColourModeSwitcher/ColourModeSwitcher';
 import { Link } from 'react-router-dom';
@@ -24,9 +24,6 @@ export default function NavBar() {
               Projects
             </Button>
           </Link>
-          <Button as="a" variant="ghost" aria-label="CV" my={5}>
-            CV
-          </Button>
         </Flex>
 
         {/* Mobile */}
@@ -76,11 +73,6 @@ export default function NavBar() {
           <Link to="/projects">
             <Button as="a" variant="outline" aria-label="Projects" my={5}>
               Projects
-            </Button>
-          </Link>
-          <Link to="/cv">
-            <Button as="a" variant="outline" aria-label="CV" my={5} w="100%">
-              CV
             </Button>
           </Link>
         </Flex>
