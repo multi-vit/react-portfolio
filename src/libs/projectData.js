@@ -1,6 +1,8 @@
 import week9Demo from '../assets/project-images/week-9.gif';
 import virtualKeyboard from '../assets/project-images/virtual-keyboard.gif';
-//TODO add final project and python project (keep description inside limit for mobile card)
+//TODO add python project (keep description inside limit for mobile card)
+//TODO do screenshot gif for project month
+//TODO do screenshot gif for python project that you add
 const projects = [
   {
     title: 'Project Week',
@@ -17,6 +19,14 @@ const projects = [
     alt: 'Virtual Keyboard Screenshot',
     github: 'https://github.com/multi-vit/virtual-keyboard',
     techStack: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    title: 'Project Month',
+    description: `For the final 4 weeks of School of Code, I worked as part of a team of 6 to create a full-stack app aimed at informing and enabling users to make choices about seasonal food.`,
+    src: virtualKeyboard,
+    alt: 'Final Project Screenshot',
+    github: 'https://github.com/SchoolOfCode/final-project_front-end-12',
+    techStack: ['Next.js', 'Node.js', 'Express', 'PostgreSQL'],
   },
 ];
 

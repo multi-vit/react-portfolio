@@ -1,24 +1,17 @@
 import { useState } from 'react';
-import { Flex, Button, IconButton } from '@chakra-ui/react';
+import { Flex, Button, IconButton, Spacer, Heading } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColourModeSwitcher } from '../ColourModeSwitcher/ColourModeSwitcher';
 import { Link } from 'react-router-dom';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
-//TODO Sort out navbar positioning so it fills the whole width and scrolled items move behind it
-//TODO Sort out navbar colour change on dark mode
-
+//TODO sort mobile dropdown (outline the div so you can see what you're working with)
 export default function NavBar() {
   const [display, changeDisplay] = useState('none');
   return (
-    <Flex>
-      <Flex
-        position="fixed"
-        top="1rem"
-        left="1rem"
-        align="center"
-        w="100%"
-        bgColor="#FFCA3A"
-      >
+    <Flex w="100vw" position="sticky" zIndex={2}>
+      <Flex align="center" w="100vw" position="sticky">
         {/* Desktop */}
         <Flex display={['none', 'none', 'flex', 'flex']}>
           {/* Wrap each button inside this code, with the relevant href path when you've set up React Router
@@ -46,6 +39,34 @@ export default function NavBar() {
           display={['flex', 'flex', 'none', 'none']}
         />
         <ColourModeSwitcher justify-self="flex-end" />
+        <Spacer />
+        <Heading as="h1" size="lg">
+          Andy Johnson
+        </Heading>
+        <Spacer />
+        <Button
+          as="a"
+          target="_blank"
+          href="https://github.com/multi-vit"
+          leftIcon={<FaGithub />}
+          variant="ghost"
+          aria-label="GitHub"
+          my={5}
+        >
+          GitHub <ExternalLinkIcon mx="2px" />
+        </Button>
+        <Button
+          as="a"
+          target="_blank"
+          href="https://www.linkedin.com/in/mult-vit/"
+          colorScheme="linkedin"
+          leftIcon={<FaLinkedin />}
+          variant="ghost"
+          aria-label="LinkedIn"
+          my={5}
+        >
+          LinkedIn <ExternalLinkIcon mx="2px" />
+        </Button>
       </Flex>
 
       {/* Mobile Content */}
@@ -53,12 +74,11 @@ export default function NavBar() {
         w="100vw"
         display={display}
         zIndex={20}
-        pos="fixed"
+        pos="sticky"
         top="0"
         left="0"
         overflowY="auto"
         flexDir="column"
-        backgroundColor={'#ffffff'}
       >
         <Flex justify="flex-end">
           <IconButton

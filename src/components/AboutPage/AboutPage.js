@@ -18,10 +18,9 @@ import PictureOfMe from '../../assets/me.jpeg';
 
 export default function AboutPage() {
   return (
-    <VStack spacing={100}>
+    <VStack spacing={50}>
       <NavBar />
       <Flex align="center">
-        {/*TODO - when navbar is sorted, sort positioning of accordion and image as currently spacing from top (spacing on vstack)*/}
         <Image
           src={PictureOfMe}
           alt="Me playing the sousaphone"
