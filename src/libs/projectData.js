@@ -1,9 +1,8 @@
 import week9Demo from '../assets/project-images/week-9.gif';
 import virtualKeyboard from '../assets/project-images/virtual-keyboard.gif';
 import seasonalDemo from '../assets/project-images/seasonal-demo.gif';
-//TODO add python project (keep description inside limit for mobile card)
-//TODO do screenshot gif for project month
-//TODO do screenshot gif for python project that you add
+import pythonQuiz from '../assets/project-images/quiz-app.gif';
+
 const projects = [
   {
     title: 'Project Week',
@@ -28,6 +27,14 @@ const projects = [
     alt: 'Final Project Screenshot',
     github: 'https://github.com/SchoolOfCode/final-project_front-end-12',
     techStack: ['Next.js', 'Node.js', 'Express', 'PostgreSQL'],
+  },
+  {
+    title: 'Python GUI Quiz',
+    description: `A basic quiz app created in python, with questions supplied by the Open Trivia Database (opentdb.com).`,
+    src: pythonQuiz,
+    alt: 'Python Quiz Screenshot',
+    github: 'https://github.com/multi-vit/python-gui-quiz-app',
+    techStack: ['Python'],
   },
 ];
 
