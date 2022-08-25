@@ -34,17 +34,17 @@ export default function AboutPage() {
               <AccordionButton>
                 <Box flex="1" textAlign="left">
                   Hi, my name is Andy and before the School of Code, I used to
-                  be a professional musician. So I've traded 1 keyboard for
-                  another and am looking forward to orchestrating some code!
+                  be a professional musician. So I traded 1 keyboard for another
+                  and am now orchestrating code!
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             </h1>
             <AccordionPanel pb={4} maxWidth="80vw">
-              Being a professional musician means I bring skills like
-              communication, teamwork and problem solving along with possessing
-              self-discipline and a passion for continual improvement from
-              practising my instruments.
+              I still perform regularly and being a professional musician means
+              I bring skills like communication, teamwork and problem solving
+              along with possessing self-discipline and a passion for continual
+              improvement from practising my instruments.
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
@@ -53,21 +53,21 @@ export default function AboutPage() {
         <Heading textAlign="center">School of Code</Heading>
         <Box maxW="90vw">
           <Text>
-            Chosen from over 3000 applicants to attend a 16-week intense, full
-            stack development bootcamp. Worked in pairs and teams to learn full
-            stack tools and build applications. During project month, our team
-            of 6 created a full stack application to help users eat more
-            seasonally. We built this project using Next.js, Node.js, Express.js
-            and PostgreSQL, with full deployment on Netlify for the front end
-            and Heroku for the back end. Most notably, we built our own custom
-            API for the project and populated it with a data file that was over
-            1500 lines long, as well as accessing a third-party service. We pair
-            and mob programmed across our whole project and everyone worked on
-            all aspects of the app. We managed our project using Scrum, Kanban,
-            and daily stand ups and retrospectives and used GitHub flow for
-            version control. We tested using Axe, Cypress, React Testing
-            Library, Jest and Supertest. We completed 2 iterations (our MVP and
-            one stretch goal) within the month, before showcasing our
+            I was chosen from over 3000 applicants to attend a 16-week intense,
+            full stack development bootcamp. We worked in pairs and teams to
+            learn full stack tools and build applications. During project month,
+            our team of 6 created a full stack application to help users eat
+            more seasonally. We built this project using Next.js, Node.js,
+            Express.js and PostgreSQL, with full deployment on Netlify for the
+            front end and Heroku for the back end. Most notably, we built our
+            own custom API for the project and populated it with a data file
+            that was over 1500 lines long, as well as accessing a third-party
+            service. We pair and mob-programmed across our whole project and
+            everyone worked on all aspects of the app. We managed our project
+            using Scrum, Kanban, and daily stand ups and retrospectives and used
+            GitHub flow for version control. We tested using Axe, Cypress, React
+            Testing Library, Jest and Supertest. We completed 2 iterations (our
+            MVP and one stretch goal) within the month, before showcasing our
             application virtually to other developers and industry
             professionals. We have continued to iteratively improve upon the
             project since. I took a lead on testing our app with unit,
